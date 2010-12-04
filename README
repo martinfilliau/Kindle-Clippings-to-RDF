@@ -1,0 +1,17 @@
+Kindle Clippings Formatting
+============================
+The idea is to structure data extracted from Kindle (Amazon) clippings.
+
+Input: light structured data (txt file), Kindle's name (or beginning of URI)
+Output: RDF quotations
+
+Data structure:
+* Document title
+* Document author
+* Type: bookmark | highlight
+* Location: number | begin-end (eg. 207-11)
+* Date of clipping
+
+Informations to add:
+* URI: /doc-author/doc-title/loc
+
