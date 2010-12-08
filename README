@@ -3,15 +3,13 @@ Kindle Clippings Formatting
 The idea is to structure data extracted from Kindle (Amazon) clippings.
 
 Input: light structured data (txt file), Kindle's name (or beginning of URI)
-Output: RDF quotations
+Output: RDF quotations. Output is made on stdout, it it possible to redirect standard output to a file with > operator.
 
-Data structure:
-* Document title
-* Document author
-* Type: bookmark | highlight
-* Location: number | begin-end (eg. 207-11)
-* Date of clipping
+How to run:
+perl kindle2rdf.pl My\ Clippings.txt
+It is possible to redirect output to a file with > (example: perl kindle2rdf.pl My\ Clippings.txt > quotations.xml)
 
-Informations to add:
-* URI: /doc-author/doc-title/loc
-
+Resource Description:
+- We add a URI defining the position of the quote.
+- Title and author are described using the Dublin Core vocabulary.
+- Informations about the quote itself are represented with a custom vocabulary.
