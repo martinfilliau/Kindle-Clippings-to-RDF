@@ -7,7 +7,7 @@ use constant CLIPPING_BOOKMARK => 'Bookmark';
 use constant CLIPPING_NOTE => 'Note';
 use constant URI_BEGIN => 'http://martin-kindle.com';	# no trailing slash
 
-open FILE, $ARGV[0] or die "Gimme the path of a file, bitch!";
+open FILE, $ARGV[0] or die "Give me the path of a file, please.";
 binmode FILE;
 $text = join("", <FILE>);
 close FILE;
